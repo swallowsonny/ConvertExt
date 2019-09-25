@@ -1,4 +1,4 @@
-> 安卓与硬件通讯过程中（例如：蓝牙，串口等），经常会用到ByteArray的解析,故而依据node.js中[Buffer](http://nodejs.cn/api/buffer.html)的API编写的[ByteArray扩展工具类](https://github.com/swallowsonny/ext/blob/master/ByteArrayExt.kt)，解决ByteArray与基本类型转换之间的符号及大小端问题，简单高效
+> 安卓与硬件通讯过程中(例如：蓝牙，串口等)，经常会遇到ByteArray的解析，故而依据node.js中[Buffer](http://nodejs.cn/api/buffer.html)的API编写了[ByteArray扩展工具类](https://github.com/swallowsonny/ext/blob/master/ByteArrayExt.kt)，解决ByteArray与基本类型转换之间的符号及大小端问题，简单高效
 github地址：[https://github.com/swallowsonny/ext](https://github.com/swallowsonny/ext)
 
 ### 项目引入
