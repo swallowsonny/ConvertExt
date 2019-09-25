@@ -1,4 +1,30 @@
-> 依据node.js中[Buffer](http://nodejs.cn/api/buffer.html)的API编写的ByteArray扩展工具类，解决ByteArray与基本类型转换之间的符号及大小端问题
+> 依据node.js中[Buffer](http://nodejs.cn/api/buffer.html)的API编写的[ByteArray扩展工具类](https://github.com/swallowsonny/ext/blob/master/ByteArrayExt.kt)，解决ByteArray与基本类型转换之间的符号及大小端问题
+github地址：[https://github.com/swallowsonny/ext](https://github.com/swallowsonny/ext)
+
+### 项目引入
+`implementation 'com.swallowsonny:convert-ext:1.0.3'`
+
+### 基本使用
+与Node.js中[Buffer](http://nodejs.cn/api/buffer.html)的读写API几乎完全一致
+```
+// ByteArray
+val ba = byteArrayOf(0x00, 0x0a, 0xff.toByte(), 0xf6.toByte(), 0x35, 0x33, 0x38, 0x03)
+
+val i = ba.readInt8() //1位有符号 int
+val j = ba.readUInt8() // 1位无符号 int
+val i = ba.readInt16BE() //2位有符号 int, 大端
+val i = ba.readInt16LE() //2位有符号 int, 小端
+val i = ba.readUInt16BE() //2位无符号 int, 大端
+val i = ba.readUInt16LE() //2位无符号 int, 小端
+...
+
+val str = ba.toHexString(); // 转换为hex字符串
+val str = ba.toAsciiString(); // 转换为ASCII字符串
+val bytes = str.hex2ByteArray(); // hex字符串转换为ByteArray
+val bytes = str.ascii2ByteArray(); // ASCII字符串转换为ByteArray
+...
+```
+### API
 ###### ByteArray 转换 hex字符串
 ```
 fun ByteArray.toHexString(hasSpace: Boolean = true): String
@@ -91,3 +117,13 @@ fun ByteArray.insertByteArrayLE(
     insertArrayLength: Int = insertArray.size - insertArrayOffset
 ): ByteArray
 ```
+
+
+
+
+
+
+
+
+
+

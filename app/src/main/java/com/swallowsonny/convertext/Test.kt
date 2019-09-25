@@ -48,7 +48,8 @@ object Test {
 
         ba.writeStringBE("11 22 33")
         ba.writeStringLE("3.1", 3, "ascii")
-
+        val str = ba.toHexString()
+        str.hex2ByteArray()
         println(ba.toHexString())
 
     }
