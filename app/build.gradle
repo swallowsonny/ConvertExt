@@ -31,5 +31,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
-    implementation project(':convertextlibrary')
+//    implementation project(':convertextlibrary')
+    implementation 'com.swallowsonny:convert-ext:1.0.3'
 }
