@@ -46,12 +46,27 @@ object Test {
 //        ba = ba.insertByteArrayBE(byteArrayOf(0x11, 0x22, 0x33))
 //        ba = ba.insertByteArrayLE(byteArrayOf(0x11, 0x22, 0x33), 3)
 
-        ba.writeStringBE("11 22 33")
-        ba.writeStringLE("3.1", 3, "ascii")
-        val str = ba.toHexString()
-        str.hex2ByteArray()
-        println(ba.toHexString())
+//        ba.writeStringBE("11 22 33")
+//        ba.writeStringLE("3.1", 3, "ascii")
+//        val str = ba.toHexString()
+//        str.hex2ByteArray()
+//        println(ba.toHexString())
+//
+//
+//        val arr = byteArrayOf(0x04, 0x04, 0x00, 0x00, 0x00, 0x04)
+//        println(CrcUtils.getCrc16Str(arr).toHexString())
 
+        val str = "0A06823030302E31343417"
+
+        println(isFullGlsB40Data(str.hex2ByteArray()))
+    }
+
+    fun isFullGlsB40Data(bytes: ByteArray): Boolean{
+        var i = 0
+        for (j in 0 until bytes.size-1){
+            i += bytes[j]
+        }
+        return ((i xor 0xff) + 1) == bytes.last().toInt()
     }
 
 }
