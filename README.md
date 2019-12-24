@@ -1,11 +1,7 @@
 > 安卓与硬件通讯过程中(例如：蓝牙，串口等)，经常会遇到ByteArray的解析，故而依据node.js中[Buffer](http://nodejs.cn/api/buffer.html)的API编写了[ByteArray扩展工具类](https://github.com/swallowsonny/ext/blob/master/ByteArrayExt.kt)，解决ByteArray与基本类型转换之间的符号及大小端问题，简单高效
 
 ### 项目引入
-```
-maven {
-		url  "https://dl.bintray.com/swallowsonny/ext"
-	}
-```
+
 `implementation 'com.swallowsonny:convert-ext:1.0.4'`
 
 ### 基本使用
