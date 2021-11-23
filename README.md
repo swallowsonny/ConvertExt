@@ -9,8 +9,8 @@
 
 #### `byteArray.toHexString([hasSpace])`
 
-- `hasSpace` <Bolean> 字节间是否需要空格隔开。**默认值:** `true`。
-- 返回: <String>
+- `hasSpace` **Boolean** 字节间是否需要空格隔开。**默认值:** `true`。
+- 返回: **String**
 
 将字节数组转换为16进制字符串。
 
@@ -22,8 +22,8 @@ println(ba.toHexString(false))    // 01020304
 
 #### `byteArray.toAsciiString([hasSpace])`
 
-- `hasSpace` <Bolean> 字节间是否需要空格隔开。**默认值:** `false`。
-- 返回: <String>
+- `hasSpace` **Boolean** 字节间是否需要空格隔开。**默认值:** `false`。
+- 返回: **String**
 
 将字节数组转换为ASCII字符串。
 
@@ -34,7 +34,7 @@ println(ba.toAsciiString()) // I Love QMT
 
 #### `hexString.hex2ByteArray()`
 
-- 返回: <ByteArray>
+- 返回: **ByteArray**
 
 将16进制字符串转换为字节数组，自动去除空格
 
@@ -47,10 +47,10 @@ println(str1.hex2ByteArray())	// byteArrayOf(1, 2, 3, 4)
 
 #### `asciiString.ascii2ByteArray([hasSpace])`
 
-- `hasSpace` <Bolean> 是否需要移除空格。**默认值:** `false`。
-- 返回: <String>
+- `hasSpace` **Boolean** 是否需要移除空格。**默认值:** `false`。
+- 返回: **String**
 
-将ASCII字符串转换为<ByteArray>
+将ASCII字符串转换为**ByteArray**
 
 ```kotlin
 val str = "I Love QMT"
@@ -62,8 +62,8 @@ println(str.ascii2ByteArray(true).toAsciiString())	// I Love QMT
 
 #### `byteArray.readFloatBE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回: <float>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回: **float**
 
 从指定 `offset` 处的 `byteArray` 读取 32 位大端序浮点数。
 
@@ -74,8 +74,8 @@ println(ba.readFloatBE(0)) // 2.3879393E-38
 
 #### `byteArray.readFloatLE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回: <float>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回: **float**
 
 从指定 `offset` 处的 `buf` 读取 32 位小端序浮点数。
 
@@ -86,8 +86,8 @@ println(ba.readFloatLE(0)) // 1.5399896E-36
 
 #### `byteArray.readInt8([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 1`。 **默认值:** `0`。
-- 返回: 有符号的 <int> 
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 1`。 **默认值:** `0`。
+- 返回: 有符号的 **int** 
 
 从指定 `offset` 处的`byteArray`读取有符号的 8 位整数。
 
@@ -100,8 +100,8 @@ println(ba.readInt8(2)) // 抛异常
 
 #### `byteArray.readUInt8([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 1`。 **默认值:** `0`。
-- 返回: 无符号的 <int> 
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 1`。 **默认值:** `0`。
+- 返回: 无符号的 **int** 
 
 从指定 `offset` 处的 `byteArray` 读取无符号 8 位整数。
 
@@ -114,8 +114,8 @@ println(ba.readInt8(2)) // 抛异常
 
 #### `byteArray.readInt16BE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
-- 返回: <int>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
+- 返回: **int**
 
 从指定的 `offset` 处的 `byteArray` 读取有符号的大端序 16 位整数。
 
@@ -128,8 +128,8 @@ println(ba1.readInt16BE(1)) // 打印5
 
 #### `byteArray.readUInt16BE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
-- 返回: <int>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
+- 返回: **int**
 
 从指定的 `offset` 处的 `byteArray` 读取无符号的大端序 16 位整数。
 
@@ -141,8 +141,8 @@ println(ba.readUInt16BE(1)) // 打印13398 ==> 0x3456
 
 #### `byteArray.readInt16LE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
-- 返回: <int>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
+- 返回: **int**
 
 从指定的 `offset` 处的 `byteArray` 读取有符号的小端序 16 位整数。
 
@@ -156,8 +156,8 @@ println(ba.readInt16LE(1).toString(16)) // 打印5634
 
 #### `byteArray.readUInt16LE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
-- 返回: <int>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
+- 返回: **int**
 
 从指定的 `offset` 处的 `byteArray` 读取无符号的小端序 16 位整数。
 
@@ -171,8 +171,8 @@ println(ba.readUInt16LE(1).toString(16)) // 打印5634
 
 #### `byteArray.readInt32BE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回: <int>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回: **int**
 
 从指定的 `offset` 处的 `byteArray` 读取有符号的大端序 32 位整数。
 
@@ -184,8 +184,8 @@ println(ba.readInt32BE(0).toString(16)) // 打印12345678
 
 #### `byteArray.readUInt32BE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回: <int>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回: **int**
 
 从指定的 `offset` 处的 `byteArray` 读取无符号的大端序 32 位整数。
 
@@ -197,8 +197,8 @@ println(ba.readUInt32BE(0).toString(16)) // 打印12345678
 
 #### `byteArray.readInt32LE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回: <int>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回: **int**
 
 从指定的 `offset` 处的 `byteArray` 读取有符号的小端序 32 位整数。
 
@@ -210,8 +210,8 @@ println(ba.readInt32LE(0).toString(16)) // 打印78563412
 
 #### `byteArray.readUInt32LE([offset])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回: <int>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回: **int**
 
 从指定的 `offset` 处的 `byteArray` 读取无符号的小端序 32 位整数。
 
@@ -223,9 +223,9 @@ println(ba.readUInt32LE(0).toString(16)) // 打印78563412
 
 #### `byteArray.readTimeBE([offset[, pattern]])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- `pattern` <String> 转换为时间的格式。**默认值：**`yyyy-MM-dd HH:mm:ss`
-- 返回: <String>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- `pattern` **String** 转换为时间的格式。**默认值：**`yyyy-MM-dd HH:mm:ss`
+- 返回: **String**
 
 从指定的 `offset` 处的 `byteArray` 读取4字节的大端序时间戳根据规则转换为时间字符串。
 
@@ -237,9 +237,9 @@ println(ba.readTimeBE(0, "yyyy-MM-dd")) // 打印2021-11-23
 
 #### `byteArray.readTimeLE([offset[, pattern]])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- `pattern` <String> 转换为时间的格式。**默认值：**`yyyy-MM-dd HH:mm:ss`
-- 返回: <String>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- `pattern` **String** 转换为时间的格式。**默认值：**`yyyy-MM-dd HH:mm:ss`
+- 返回: **String**
 
 从指定的 `offset` 处的 `byteArray` 读取4字节的小端序时间戳根据规则转换为时间字符串。
 
@@ -251,11 +251,11 @@ println(ba.readTimeLE(0, "yyyy-MM-dd")) // 打印2021-11-23
 
 #### `byteArray.readStringBE(offset, byteLength[, encoding[, hasSpace]])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size`。 **默认值:** `0`。
-- `byteLength` <int> 字符串字节长度。
-- `encoding` <String> hex / ascii。**默认值：**`hex`。
-- `hasSpace` <Boolean> 是否有空格。**默认值：**`false`。
-- 返回: <String>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size`。 **默认值:** `0`。
+- `byteLength` **int** 字符串字节长度。
+- `encoding` **String** hex / ascii。**默认值：**`hex`。
+- `hasSpace` **Boolean** 是否有空格。**默认值：**`false`。
+- 返回: **String**
 
 从指定的 `offset` 处的 `byteArray` 读取byteLength长度的字节根据编码转化为大端序的字符串。
 
@@ -269,11 +269,11 @@ println(ba.readStringBE(0, 10, "hex")) // 49 20 4C 6F 76 65 20 51 4D 54
 
 #### `byteArray.readStringLE(offset, byteLength[, encoding[, hasSpace]])`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size`。 **默认值:** `0`。
-- `byteLength` <int> 字符串字节长度。
-- `encoding` <String> hex / ascii。**默认值：**`hex`。
-- `hasSpace` <Boolean> 是否有空格。**默认值：**`false`。
-- 返回: <String>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size`。 **默认值:** `0`。
+- `byteLength` **int** 字符串字节长度。
+- `encoding` **String** hex / ascii。**默认值：**`hex`。
+- `hasSpace` **Boolean** 是否有空格。**默认值：**`false`。
+- 返回: **String**
 
 从指定的 `offset` 处的 `byteArray` 读取byteLength长度的字节根据编码转化为小端序的字符串。
 
@@ -287,9 +287,9 @@ println(ba.readStringLE(1, 10, "hex")) // 54 4D 51 20 65 76 6F 4C 20 49
 
 #### `byteArray.readByteArrayBE(offset, byteLength)`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size`。 **默认值:** `0`。
-- `byteLength` <int> 需要读取的字节长度
-- 返回: <ByteArray>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size`。 **默认值:** `0`。
+- `byteLength` **int** 需要读取的字节长度
+- 返回: **ByteArray**
 
 从指定的 `offset` 处的 `byteArray` 读取byteLength长度的大端序字节。
 
@@ -305,9 +305,9 @@ println(ba3.toHexString()) // 03 04 05 06 07 08 09
 
 #### `byteArray.readByteArrayLE(offset, byteLength)`
 
-- `offset` <int> 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size`。 **默认值:** `0`。
-- `byteLength` <int> 需要读取的字节长度
-- 返回: <ByteArray>
+- `offset` **int** 开始读取之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size`。 **默认值:** `0`。
+- `byteLength` **int** 需要读取的字节长度
+- 返回: **ByteArray**
 
 从指定的 `offset` 处的 `byteArray` 读取byteLength长度的小端序字节。
 
@@ -327,11 +327,11 @@ println(ba3.toHexString()) // 09 08 07 06 05 04 03
 
 #### `byteArray.writeStringBE(str[, offset[, encoding]])`
 
-- `str` <String> 需要写入的字符串
+- `str` **String** 需要写入的字符串
 
-- `offset` <int> 开始读取之前要跳过的字节数。 **默认值:** `0`。
-- `encoding` <String>  str的编码类型 hex / ascii。**默认值：**`hex`。
-- 返回: <ByteArray>
+- `offset` **int** 开始读取之前要跳过的字节数。 **默认值:** `0`。
+- `encoding` **String**  str的编码类型 hex / ascii。**默认值：**`hex`。
+- 返回: **ByteArray**
 
 将字符串str根据编码`encoding`大端序写入`byteArray`指定的`offset`。
 
@@ -344,11 +344,11 @@ println(ba.toHexString()) // 01 02 03 04 00 61 62 63 64 65 00 00 00 00 00
 
 #### `byteArray.writeStringLE(str[, offset[, encoding]])`
 
-- `str` <String> 需要写入的字符串
+- `str` **String** 需要写入的字符串
 
-- `offset` <int> 开始读取之前要跳过的字节数。 **默认值:** `0`。
-- `encoding` <String>  str的编码类型 hex / ascii。**默认值：**`hex`。
-- 返回: <ByteArray>
+- `offset` **int** 开始读取之前要跳过的字节数。 **默认值:** `0`。
+- `encoding` **String**  str的编码类型 hex / ascii。**默认值：**`hex`。
+- 返回: **ByteArray**
 
 将字符串str根据编码`encoding`小端序写入`byteArray`指定的`offset`。
 
@@ -361,14 +361,14 @@ println(ba.toHexString()) // 04 03 02 01 00 65 64 63 62 61 00 00 00 00 00
 
 #### `byteArray.writeStringBE(str, offset, length[, encoding])`
 
-- `str` <String> 需要写入的字符串
+- `str` **String** 需要写入的字符串
 
-- `offset` <int> 开始读取之前要跳过的字节数。 **默认值:** `0`。
-- `length` <int>  要写入字符串的长度。
-- `encoding` <String>  str的编码类型 hex / ascii。**默认值：**`hex`。
-- 返回: <ByteArray>
+- `offset` **int** 开始读取之前要跳过的字节数。 **默认值:** `0`。
+- `length` **int**  要写入字符串的长度。
+- `encoding` **String**  str的编码类型 hex / ascii。**默认值：**`hex`。
+- 返回: **ByteArray**
 
-- `offset` <int> 开始读取之前要跳过的字节数。 **默认值:** `0`。
+- `offset` **int** 开始读取之前要跳过的字节数。 **默认值:** `0`。
 
 将字符串str根据长度`length`与编码`encoding`大端序写入`byteArray`指定的`offset`。
 
@@ -381,14 +381,14 @@ println(ba.toHexString()) // 01 02 00 00 00 61 62 63 00 00 00 00 00 00 00
 
 #### `byteArray.writeStringLE(str, offset, length[, encoding])`
 
-- `str` <String> 需要写入的字符串
+- `str` **String** 需要写入的字符串
 
-- `offset` <int> 开始读取之前要跳过的字节数。 **默认值:** `0`。
-- `length` <int>  要写入字符串的长度。
-- `encoding` <String>  str的编码类型 hex / ascii。**默认值：**`hex`。
-- 返回: <ByteArray>
+- `offset` **int** 开始读取之前要跳过的字节数。 **默认值:** `0`。
+- `length` **int**  要写入字符串的长度。
+- `encoding` **String**  str的编码类型 hex / ascii。**默认值：**`hex`。
+- 返回: **ByteArray**
 
-- `offset` <int> 开始读取之前要跳过的字节数。 **默认值:** `0`。
+- `offset` **int** 开始读取之前要跳过的字节数。 **默认值:** `0`。
 
 将字符串str根据长度`length`与编码`encoding`小端序写入`byteArray`指定的`offset`。
 
@@ -401,9 +401,9 @@ println(ba.toHexString()) // 04 03 00 00 00 65 64 63 00 00 00 00 00 00 00
 
 #### `byteArray.writeFloatBE(value[, offset])`
 
-- `value` <int> 要写入 `byteArray` 的浮点数。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回:  <ByteArray>
+- `value` **int** 要写入 `byteArray` 的浮点数。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回:  **ByteArray**
 
 将 `value`按大端序写入 `byteArray` 中指定的 `offset`。
 
@@ -416,9 +416,9 @@ println(ba.readFloatBE()) // 3.1415925
 
 #### `byteArray.writeFloatLE(value[, offset])`
 
-- `value` <int> 要写入 `byteArray` 的浮点数。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回:  <ByteArray>
+- `value` **int** 要写入 `byteArray` 的浮点数。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回:  **ByteArray**
 
 将 `value`按小端序写入 `byteArray` 中指定的 `offset`。
 
@@ -431,9 +431,9 @@ println(ba.readFloatLE()) // 3.1415925
 
 #### `byteArray.writeInt8(value[, offset])`
 
-- `value` <int> 要写入 `byteArray` 的整数。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 1`。 **默认值:** `0`。
-- 返回:  <ByteArray>
+- `value` **int** 要写入 `byteArray` 的整数。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 1`。 **默认值:** `0`。
+- 返回:  **ByteArray**
 
 将 `value` 写入 `byteArray` 中指定的 `offset`。 `value` 必须是有效的有符号 8 位整数。
 
@@ -446,9 +446,9 @@ println(ba.writeInt8(11, 11).toHexString())	// The value of "offset" is out of r
 
 #### `byteArray.writeInt16BE(value[, offset])`
 
-- `value` <int> 要写入 `byteArray` 的整数。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
-- 返回:  <ByteArray>
+- `value` **int** 要写入 `byteArray` 的整数。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
+- 返回:  **ByteArray**
 
 将 `value` 作为大端序写入 `byteArray` 中指定的 `offset`。
 
@@ -460,9 +460,9 @@ println(ba.writeInt16BE(11, 3).toHexString())	// 00 0A 03 00 0B 06 07 08 09
 
 #### `byteArray.writeInt16LE(value[, offset])`
 
-- `value` <int> 要写入 `byteArray` 的整数。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
-- 返回:  <ByteArray>
+- `value` **int** 要写入 `byteArray` 的整数。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 2`。 **默认值:** `0`。
+- 返回:  **ByteArray**
 
 将 `value` 作为小端序写入 `byteArray` 中指定的 `offset`。
 
@@ -474,9 +474,9 @@ println(ba.writeInt16LE(11, 3).toHexString())	// 0A 00 03 0B 00 06 07 08 09
 
 #### `byteArray.writeInt32BE(value[, offset])`
 
-- `value` <int> 要写入 `byteArray` 的整数。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回:  <ByteArray>
+- `value` **int** 要写入 `byteArray` 的整数。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回:  **ByteArray**
 
 将 `value` 作为大端序写入 `byteArray` 中指定的 `offset`。
 
@@ -488,9 +488,9 @@ println(ba.writeInt32BE(11, 4).toHexString())	// 00 00 00 0A 00 00 00 0B 09
 
 #### `byteArray.writeInt32LE(value[, offset])`
 
-- `value` <int> 要写入 `byteArray` 的整数。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- 返回:  <ByteArray>
+- `value` **int** 要写入 `byteArray` 的整数。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- 返回:  **ByteArray**
 
 将 `value` 作为小端序写入 `byteArray` 中指定的 `offset`。
 
@@ -502,10 +502,10 @@ println(ba.writeInt32LE(11, 4).toHexString())	// 0A 00 00 00 0B 00 00 00 09
 
 #### `byteArray.writeTimeBE(time[, offset[, pattern]])`
 
-- `time`  <String> 要写入 `byteArray` 的时间字符串。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- `pattern` <String> 时间格式。**默认值：**`yyyy-MM-dd HH:mm:ss`
-- 返回:  <ByteArray>
+- `time`  **String** 要写入 `byteArray` 的时间字符串。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- `pattern` **String** 时间格式。**默认值：**`yyyy-MM-dd HH:mm:ss`
+- 返回:  **ByteArray**
 
 将 `time` 作为大端序写入 `byteArray` 中指定的 `offset`，占用四个字节
 
@@ -518,10 +518,10 @@ println(ba.readTimeBE())	// 2021-11-23 14:20:52
 
 #### `byteArray.writeTimeLE(time[, offset[, pattern]])`
 
-- `time`  <String> 要写入 `byteArray` 的时间字符串。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
-- `pattern` <String> 时间格式。**默认值：**`yyyy-MM-dd HH:mm:ss`
-- 返回:  <ByteArray>
+- `time`  **String** 要写入 `byteArray` 的时间字符串。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - 4`。 **默认值:** `0`。
+- `pattern` **String** 时间格式。**默认值：**`yyyy-MM-dd HH:mm:ss`
+- 返回:  **ByteArray**
 
 将 `time` 作为小端序写入 `byteArray` 中指定的 `offset`，占用四个字节
 
@@ -534,10 +534,10 @@ println(ba.readTimeLE())	// 2021-11-23 14:20:52
 
 #### `byteArray.writeByteArrayBE(byteArray[, offset[, length]])`
 
-- `byteArray`  <ByteArray> 要写入 `byteArray` 的字节数组。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - length`。 **默认值:** `0`。
-- `length` <int> 要写入字节数组的长度。**默认值：**`byteArray.size`。
-- 返回:  <ByteArray>
+- `byteArray`  **ByteArray** 要写入 `byteArray` 的字节数组。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - length`。 **默认值:** `0`。
+- `length` **int** 要写入字节数组的长度。**默认值：**`byteArray.size`。
+- 返回:  **ByteArray**
 
 将 `byteArray` 根据指定的长度截取作为大端序写入 `byteArray` 中指定的 `offset`
 
@@ -552,10 +552,10 @@ println(ba.toHexString()) // 01 02 03 04 05 06 00 00 00 00 00 00 00 00 00
 
 #### `byteArray.writeByteArrayLE(byteArray[, offset[, length]])`
 
-- `byteArray`  <ByteArray> 要写入 `byteArray` 的字节数组。
-- `offset` <int>开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - length`。 **默认值:** `0`。
-- `length` <int> 要写入字节数组的长度。**默认值：**`byteArray.size`。
-- 返回:  <ByteArray>
+- `byteArray`  **ByteArray** 要写入 `byteArray` 的字节数组。
+- `offset` **int**开始写入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - length`。 **默认值:** `0`。
+- `length` **int** 要写入字节数组的长度。**默认值：**`byteArray.size`。
+- 返回:  **ByteArray**
 
 将 `byteArray` 根据指定的长度截取作为小端序写入 `byteArray` 中指定的 `offset`
 
@@ -570,11 +570,11 @@ println(ba.toHexString()) // 01 02 03 04 05 06 00 00 00 00 00 00 00 00 00
 
 #### `byteArray.insertByteArrayBE(insertArray[, origrinalIndex[, insertArrayOffset[, insertArrayLength]]])`
 
-- `insertArray`  <ByteArray> 要插入 `byteArray` 的字节数组。
-- `origrinalIndex` <int>开始插入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - length`。 **默认值:** `0`。
-- `insertArrayOffset` <int> 要插入字节数组跳过的字节数。
-- `insertArrayLength` <int> 要插入字节数组的长度。**默认值：**`insertArray.size - insertArrayOffset`。
-- 返回:  <ByteArray>
+- `insertArray`  **ByteArray** 要插入 `byteArray` 的字节数组。
+- `origrinalIndex` **int**开始插入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - length`。 **默认值:** `0`。
+- `insertArrayOffset` **int** 要插入字节数组跳过的字节数。
+- `insertArrayLength` **int** 要插入字节数组的长度。**默认值：**`insertArray.size - insertArrayOffset`。
+- 返回:  **ByteArray**
 
 将 `insertArray` 根据指定的索引`insertArrayOffset`与长度`insertArrayLength`截取作为大端序插入 `byteArray` 中指定的 `origrinalIndex`。返回插入后的字节数组。
 
@@ -587,11 +587,11 @@ println(result.toHexString()) // 00 02 03 04 05 06 00 00 00 00 00 00 00 00 00 00
 
 #### `byteArray.insertByteArrayLE(insertArray[, origrinalIndex[, insertArrayOffset[, insertArrayLength]]])`
 
-- `insertArray`  <ByteArray> 要插入 `byteArray` 的字节数组。
-- `origrinalIndex` <int>开始插入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - length`。 **默认值:** `0`。
-- `insertArrayOffset` <int> 要插入字节数组跳过的字节数。
-- `insertArrayLength` <int> 要插入字节数组的长度。**默认值：**`insertArray.size - insertArrayOffset`。
-- 返回:  <ByteArray>
+- `insertArray`  **ByteArray** 要插入 `byteArray` 的字节数组。
+- `origrinalIndex` **int**开始插入之前要跳过的字节数。 必须满足 `0 <= offset <= byteArray.size - length`。 **默认值:** `0`。
+- `insertArrayOffset` **int** 要插入字节数组跳过的字节数。
+- `insertArrayLength` **int** 要插入字节数组的长度。**默认值：**`insertArray.size - insertArrayOffset`。
+- 返回:  **ByteArray**
 
 将 `insertArray` 根据指定的索引`insertArrayOffset`与长度`insertArrayLength`截取作为小端序插入 `byteArray` 中指定的 `origrinalIndex`。返回插入后的字节数组。
 
