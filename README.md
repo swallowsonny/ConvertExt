@@ -368,8 +368,6 @@ println(ba.toHexString()) // 04 03 02 01 00 65 64 63 62 61 00 00 00 00 00
 - `encoding` **String**  str的编码类型 hex / ascii。**默认值：**`hex`。
 - 返回: **ByteArray**
 
-- `offset` **int** 开始读取之前要跳过的字节数。 **默认值:** `0`。
-
 将字符串str根据长度`length`与编码`encoding`大端序写入`byteArray`指定的`offset`。
 
 ```kotlin
@@ -387,8 +385,6 @@ println(ba.toHexString()) // 01 02 00 00 00 61 62 63 00 00 00 00 00 00 00
 - `length` **int**  要写入字符串的长度。
 - `encoding` **String**  str的编码类型 hex / ascii。**默认值：**`hex`。
 - 返回: **ByteArray**
-
-- `offset` **int** 开始读取之前要跳过的字节数。 **默认值:** `0`。
 
 将字符串str根据长度`length`与编码`encoding`小端序写入`byteArray`指定的`offset`。
 
